@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+<h1>Voici le formulaire d'inscription</h1>
+
+<form method="post" action="traitement.php">
+    <fieldset>
+        <legend>Vos coordonnées</legend>
+        <p>
+            <label for="email">E-mail :</label>
+            <input type="email" name="email" id="email" placeholder="email@live.fr"/>
+            <br>
+            <br>
+            <label for="name">Nom :</label>
+            <input type="text" name="name" id="name" placeholder="Nom"/>
+            <label for="surname">Prénom :</label>
+            <input type="text" name="surname" id="surname" placeholder="Prénom"/>
+            <br>
+            <br>
+            <label for="tel">Numéro de téléphone :</label>
+            <input type="tel" name="tel" id="tel" placeholder="01.02.03.04.05"/>
+            <br>
+            <br>
+            <label for="date">Date de naissance :</label>
+            <input type="date" name="date" id="date" placeholder="jj/mm/aaaa"/>
+            <br>
+            <br>
+            <label for="pays">Dans quel pays habitez-vous ?</label><br />
+            <select name="pays" id="pays">
+                <optgroup label="Europe">
+                    <option value="france">France</option>
+                    <option value="espagne">Espagne</option>
+                    <option value="italie">Italie</option>
+                    <option value="royaume-uni">Royaume-Uni</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="canada">Canada</option>
+                    <option value="etats-unis">Etats-Unis</option>
+                </optgroup>
+                <optgroup label="Asie">
+                    <option value="chine">Chine</option>
+                    <option value="japon">Japon</option>
+                </optgroup>
+            </select>
+            <br>
+            <br>
+            <label for="CP">Code postal :</label>
+            <input type="text" name="CP" id="CP" placeholder="75000"/>
+            <label for="city">Ville :</label>
+            <input type="text" name="city" id="city" placeholder="Paris"/>
+            <br>
+            <br>
+            <label for="adress">Adresse :</label>
+            <input type="text" name="adress" id="adress" placeholder="Rue du..."/>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Votre souhait</legend> <!-- Titre du fieldset -->
+
+        <p>
+            Faites un souhait que vous voudriez voir exaucé :
+
+            <input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Etre riche</label>
+            <input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Etre célèbre</label>
+            <input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Etre <strong>encore</strong> plus intelligent</label>
+            <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+        </p>
+
+        <p>
+            <label for="precisions">Si "Autre", veuillez préciser :</label>
+            <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+        </p>
+    </fieldset>
+    <br>
+    <input type="submit" value="Envoyer" />
+</form>
+
+</body>
+</html>
